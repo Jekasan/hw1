@@ -38,7 +38,8 @@ public class Hw1Gladnev {
         // Задание 5
         if (select == 5) {
             addOrSubtractAndPrint(5, 5, false);
-        } else {
+        }
+        if (select > 5 || select < 1) {
             System.out.println("Неверный ввод");
         }
     }
