@@ -9,9 +9,8 @@ public class Hw1Gladnev {
         int[][] arr = {{0, 0, 2, 2, 2}, {2, 2, 2, 2, 2}};
         System.out.println(sumOfPositiveElements(arr));
         // Задание 2
-        int size = 7;
-        char[][] arr2 = new char[size][size];
-        printSquare(size, arr2);
+        int size = 3;
+        printSquare(size);
         // Задание 3
         int[][] arr3 = new int[10][10];
         arrayDiagonal(arr3);
@@ -19,8 +18,8 @@ public class Hw1Gladnev {
         int[][] arr4 = {{1, 2, 3}, {4, 5, 6}};
         System.out.println("Максимальное значение = " + findMax(arr4));
         // Задание 5
-        int[][] arr5 = {{1, 2, 3}, {4, 5, 10}};
-        System.out.println("Максимальное значение = " + sumOfTwoString(arr5));
+        int[][] arr5 = {{1, 2, 3}, {11, 5, 10}};
+        System.out.println("Максимальное значение = " + sumOfSecondStringOfArray(arr5));
     }
 
     // Задание 1
@@ -29,7 +28,7 @@ public class Hw1Gladnev {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 if (arr[i][j] > 0) {
-                    sum = sum + arr[i][j];
+                    sum += arr[i][j];
                 }
             }
         }
@@ -37,15 +36,10 @@ public class Hw1Gladnev {
     }
 
     // Задание 2
-    public static void printSquare(int size, char[][] arr2) {
+    public static void printSquare(int size) {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                arr2[i][j] = '*';
-            }
-        }
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                System.out.print(arr2[i][j] + " ");
+                System.out.print("*");
             }
             System.out.println();
         }
@@ -86,7 +80,7 @@ public class Hw1Gladnev {
     }
 
     // Задание 5
-    public static int sumOfTwoString(int[][] arr5) {
+    public static int sumOfSecondStringOfArray(int[][] arr5) {
         int max = 0;
         for (int i = 0; i < arr5.length; i++) {
             for (int j = 0; j < arr5[i].length; j++) {
