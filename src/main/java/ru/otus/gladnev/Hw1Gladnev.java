@@ -82,15 +82,13 @@ public class Hw1Gladnev {
     // Задание 5
     public static int sumOfSecondStringOfArray(int[][] arr5) {
         int sum = 0;
-        for (int i = 0; i < arr5.length; i++) {
-            for (int j = 0; j < arr5[i].length; j++) {
-                if (arr5.length > 1 && i == 1) {
-                    sum += arr5[i][j];
-                }
-                if (arr5.length <= 1) {
-                    sum = -1;
-                }
+        if (arr5.length > 1) {
+            for (int i = 0; i < arr5[1].length; i++) {
+                sum += arr5[1][arr5.length];
             }
+        }
+        if (arr5.length <= 1) {
+            sum = -1;
         }
         return sum;
     }
