@@ -18,7 +18,7 @@ public class Hw1Gladnev {
         int[][] arr4 = {{1, 2, 3}, {4, 5, 6}};
         System.out.println("Максимальное значение = " + findMax(arr4));
         // Задание 5
-        int[][] arr5 = {{1, 1, 1}, {2, 2, 2}};
+        int[][] arr5 = {{1, 1, 1}, {2, 3, 4}};
         System.out.println("Сумма = " + sumOfSecondStringOfArray(arr5));
     }
 
@@ -84,7 +84,7 @@ public class Hw1Gladnev {
         int sum = 0;
         if (arr5.length > 1) {
             for (int i = 0; i < arr5[1].length; i++) {
-                sum += arr5[1][arr5.length];
+                sum += arr5[1][i];
             }
         }
         if (arr5.length <= 1) {
