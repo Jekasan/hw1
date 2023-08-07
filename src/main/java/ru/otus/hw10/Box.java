@@ -42,7 +42,7 @@ public class Box {
     }
 
     public void remItem(String put){
-        if (opened) {
+        if (opened && put != "null") {
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i].equals(put)) {
                     arr[i] = null;
@@ -53,7 +53,7 @@ public class Box {
     }
 
     public void setItem(String put) {
-        if (opened) {
+        if (opened && put != "null") {
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] == null) {
                     arr[i] = put;
