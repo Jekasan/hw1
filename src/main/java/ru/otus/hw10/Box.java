@@ -6,17 +6,15 @@ public class Box {
     private final int size;
     private String color;
 
-    private Boolean opened;
+    private boolean opened;
 
-    private String put;
-    String[] arr = new String[7];
+    private String[] arr = new String[7];
 
 
     public Box(int size, String color, Boolean opened, String put) {
         this.size = size;
         this.color = color;
         this.opened = opened;
-        this.put = put;
     }
 
     public float getSize() {
@@ -43,10 +41,10 @@ public class Box {
         return size;
     }
 
-    public void remArr(String put){
+    public void remItem(String put){
         if (opened) {
             for (int i = 0; i < arr.length; i++) {
-                if (arr[i] == put) {
+                if (arr[i].equals(put)) {
                     arr[i] = null;
                     break;
                 }
@@ -54,7 +52,7 @@ public class Box {
         }
     }
 
-    public void setArr(String put) {
+    public void setItem(String put) {
         if (opened) {
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] == null) {

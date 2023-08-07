@@ -19,13 +19,13 @@ public class Hw10 {
         box.info();
         box.setOpened(true);
         box.info();
-        box.setArr("pen");
+        box.setItem("pen");
         box.info();
-        box.setArr("pensil");
+        box.setItem("pensil");
         box.info();
-        box.setArr("apple");
+        box.setItem("apple");
         box.info();
-        box.remArr("apple");
+        box.remItem("apple");
         box.info();
 
     }
