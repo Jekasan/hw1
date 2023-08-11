@@ -44,7 +44,7 @@ public class Box {
     public void remItem(String put){
         if (opened && put != null) {
             for (int i = 0; i < arr.length; i++) {
-                if (arr[i].equals(put)) {
+                if (put.equals(arr[i])) {
                     arr[i] = null;
                     break;
                 }
