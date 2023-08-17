@@ -6,26 +6,10 @@ public class Animal {
     private int swimSpeed;
     private int endurance;
     private int coef;
-    private int rDistance;
-    private int sDistance;
-    private int rTime;
-    private int sTime;
-
-    public int getrDistance() {
-        return rDistance;
-    }
-
-    public void setrDistance(int rDistance) {
-        this.rDistance = rDistance;
-    }
-
-    public int getsDistance() {
-        return sDistance;
-    }
-
-    public void setsDistance(int sDistance) {
-        this.sDistance = sDistance;
-    }
+    private int runDistance;
+    private int swimDistance;
+    private int runTime;
+    private int swimTime;
 
     public Animal(String name, int runSpeed, int swimSpeed, int endurance) {
         this.name = name;
@@ -34,64 +18,29 @@ public class Animal {
         this.endurance = endurance;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getRunSpeed() {
-        return runSpeed;
-    }
-
-    public void setRunSpeed(int runSpeed) {
-        this.runSpeed = runSpeed;
-    }
-
-    public int getSwimSpeed() {
-        return swimSpeed;
-    }
-
-    public void setSwimSpeed(int swimSpeed) {
-        this.swimSpeed = swimSpeed;
-    }
-
-    public int getEndurance() {
-        return endurance;
-    }
-
-    public void setEndurance(int endurance) {
-        this.endurance = endurance;
-    }
-
-    public int run(int rDistance) {
-        setrDistance(rDistance);
-        if ((endurance - rDistance) > 0) {
-            endurance -= rDistance;
-            rTime = rDistance / runSpeed;
-        } else if ((endurance - rDistance) <= 0) {
-            rTime = -1;
+    public int run(int runDistance) {
+        if ((endurance - runDistance) > 0) {
+            endurance -= runDistance;
+            runTime = runDistance / runSpeed;
+        } else {
+            runTime = -1;
             System.out.print("У животного: " + name + " появилась усталость.  ");
         }
-        return rTime;
+        return runTime;
     }
 
-    public int swim(int sDistance, int coef) {
-        setsDistance(sDistance);
-        if ((endurance - sDistance) > 0) {
-            endurance -= sDistance * coef;
-            sTime = sDistance / swimSpeed;
-        }
-        if ((endurance - sDistance) <= 0) {
-            sTime = -1;
+    public int swim(int swimDistance, int coef) {
+        if ((endurance - swimDistance) > 0) {
+            endurance -= swimDistance * coef;
+            swimTime = swimDistance / swimSpeed;
+        } else {
+            swimTime = -1;
             System.out.print("У животного: " + name + " появилась усталость.  ");
         }
-        return sTime;
+        return swimTime;
     }
 
     public void info() {
-        System.out.println("Имя: " + name + " Скорость бега: " + runSpeed + " Скорость плавания: " + swimSpeed + " Выносливость: " + endurance + " Дистанций(бег,плавание): " + rDistance + " " + sDistance + " Время: " + (rTime + sTime));
+        System.out.println("Имя: " + name + " Скорость бега: " + runSpeed + " Скорость плавания: " + swimSpeed + " Выносливость: " + endurance + " Дистанций(бег,плавание): " + runDistance + " " + swimDistance + " Время: " + (runTime + swimTime));
     }
 }
