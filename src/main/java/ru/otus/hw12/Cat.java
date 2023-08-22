@@ -6,15 +6,24 @@ public class Cat {
 
     private boolean satiety;
 
-    public Cat(String name, int appetite,int maxFood) {
-        Plate plate = new Plate(maxFood);
-        this.satiety = plate.eating(appetite);
+    public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
     }
 
+    void eat(Plate plate) {
+        if (appetite <= plate.currentFood) {
+            plate.eating(appetite);
+            System.out.println("Кот " + name + " поел");
+            satiety = true;
+        } else {
+            System.out.println("Коту " + name + " не хватает еды");
+        }
+    }
+
     public void info(){
-        System.out.println("Имя: " + name + " Аппетит: " + appetite + " сытость: " + satiety);
+        String message = satiety ? "кот сыт" : "Кот голоден";
+        System.out.println("Имя: " + name + " Аппетит: " + appetite + " сытость: " + message);
     }
 
 }

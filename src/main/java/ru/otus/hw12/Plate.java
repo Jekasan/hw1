@@ -14,7 +14,7 @@ public class Plate {
     }
 
     public boolean eating(int eat) {
-        if (eat <= maxFood) {
+        if (eat <= maxFood && eat >= 0) {
             currentFood -= eat;
             return true;
         }
