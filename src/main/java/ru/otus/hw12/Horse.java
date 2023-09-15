@@ -1,8 +1,6 @@
 package ru.otus.hw12;
 
 public class Horse extends Transport implements Movement {
-    private String name;
-    private int distance;
     int remainder;
 
     public Horse(String name, int remainder) {

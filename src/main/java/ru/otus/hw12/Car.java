@@ -1,12 +1,12 @@
 package ru.otus.hw12;
 
+import java.util.Collections;
+
 public class Car extends Transport implements Movement {
-    private int distance;
 
     public Car(String name, int remainder) {
-        super(name, remainder,8);
+        super(name, remainder, 8);
     }
-
     @Override
     public boolean move(Place place, int distance) {
         if (!place.permission(this)) {

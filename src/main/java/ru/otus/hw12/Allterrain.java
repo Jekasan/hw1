@@ -1,10 +1,9 @@
 package ru.otus.hw12;
 
 public class Allterrain extends Transport implements Movement {
-    private int distance;
 
     public Allterrain(String name, int remainder) {
-        super(name, remainder,6);
+        super(name, remainder, 6);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package ru.otus.hw12;
 
 public class Bicycle extends Transport implements Movement {
-    private int distance;
     public Bicycle(String name, int remainder) {
         super(name, remainder,2);
     }

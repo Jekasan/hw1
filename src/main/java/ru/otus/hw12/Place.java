@@ -30,7 +30,7 @@ public enum Place {
         return false;
     }
 
-    Place(String desc) {
+    Place(String description) {
         this.description = description;
     }
 }
