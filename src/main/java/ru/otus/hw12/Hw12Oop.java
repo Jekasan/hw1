@@ -19,7 +19,7 @@ public class Hw12Oop {
 
             boolean bMove = human.move(place, random(20) + 10);
 
-            if (!bMove && place.permission(human.getCurrentTransport())) {
+            if (!bMove) {
                 break;
             }
             System.out.println();

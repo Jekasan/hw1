@@ -7,9 +7,11 @@ public class Car extends Transport implements Movement {
     public Car(String name, int remainder) {
         super(name, remainder, 8);
     }
+
     @Override
     public boolean move(Place place, int distance) {
-        if (!place.permission(this)) {
+
+        if (place.name() != "PLAIN") {
             System.out.println(name + " не едет по " + place.getDescription());
             return false;
         }

@@ -9,7 +9,7 @@ public class Horse extends Transport implements Movement {
 
     @Override
     public boolean move(Place place, int distance) {
-        if (!place.permission(this)) {
+        if (place.name() != "SWAMP") {
             System.out.println(name + " не едет по " + place.getDescription());
             return false;
         }

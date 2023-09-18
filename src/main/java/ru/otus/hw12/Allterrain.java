@@ -8,10 +8,6 @@ public class Allterrain extends Transport implements Movement {
 
     @Override
     public boolean move(Place place, int distance) {
-        if (!place.permission(this)) {
-            System.out.println(name + " не едет по " + place.getDescription());
-            return false;
-        }
         int tryDistance = distance / сonsumption;
         if (tryDistance > remainder) {
             System.out.println(name + " не хватило бензина");
