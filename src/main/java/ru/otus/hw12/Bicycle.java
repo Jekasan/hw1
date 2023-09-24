@@ -7,7 +7,7 @@ public class Bicycle extends Transport implements Movement {
 
     @Override
     public boolean move(Place place, int distance) {
-        if (place.name() != "SWAMP") {
+        if (place != Place.SWAMP) {
             System.out.println(name + " не едет по " + place.getDescription());
             return false;
         }

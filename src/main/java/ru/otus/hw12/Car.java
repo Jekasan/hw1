@@ -11,7 +11,7 @@ public class Car extends Transport implements Movement {
     @Override
     public boolean move(Place place, int distance) {
 
-        if (place.name() != "PLAIN") {
+        if (place != Place.PLAIN) {
             System.out.println(name + " не едет по " + place.getDescription());
             return false;
         }
